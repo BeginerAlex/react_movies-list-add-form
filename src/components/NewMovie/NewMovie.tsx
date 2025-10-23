@@ -30,8 +30,8 @@ export const NewMovie: React.FC<Props> = ({ onAdd }) => {
     setMovieData(prevData => ({ ...prevData, [name]: value }));
   };
 
-  const handleSubmit = (value: React.FormEvent) => {
-    value.preventDefault();
+  const handleSubmit = (event: React.FormEvent) => {
+    event.preventDefault();
 
     if (!isFormValid) {
       return;
